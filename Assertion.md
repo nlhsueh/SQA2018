@@ -84,7 +84,7 @@ public BigInteger modInverse(BigInteger m) {
 }
 ```
 
-### Do NOT use when ...
+### Do NOT use 
 
 
 #### Do not use assertions for argument checking in public methods.
