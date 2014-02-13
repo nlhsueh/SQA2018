@@ -11,8 +11,7 @@ One of the quickest and most effective ways to detect and correct bugs.
 
 Enhance maintainability: assertions serve to document the inner workings of your program
 
-Form
----
+### Form
 
 Form 1
 
@@ -28,10 +27,9 @@ Enable and disable
 ---
 To ensure that assertions are not a performance liability in deployed applications, assertions can be enabled or disabled when the program is started, and are disabled by default.
 
-Use Assertion when ...
-===
+### Use Assertion when ...
 
-### Internal Invariants
+#### Internal Invariants
 
 ```
 if (i % 3 == 0) {
@@ -44,7 +42,8 @@ if (i % 3 == 0) {
 }
 ```
 
-class Invariants
+#### class Invariants
+
 A class invariants is a type of internal invariant that applies to every instance of a class at all times
 
 ```
@@ -60,7 +59,7 @@ Because this method checks a constraint that should be true before and after any
 assert balanced();
 ```
 
-Control-Flow Invariants
+#### Control-Flow Invariants
 
 ```
 void foo() { 
@@ -71,7 +70,7 @@ void foo() {
 }
 ```
 
-Postconditions, and Class Invariants
+#### Postconditions
 
 You can test postcondition with assertions in both public and nonpublic methods. 
 
@@ -85,10 +84,10 @@ public BigInteger modInverse(BigInteger m) {
 }
 ```
 
-Do NOT use when ...
+### Do NOT use when ...
 
 
-Do not use assertions for argument checking in public methods.
+#### Do not use assertions for argument checking in public methods.
 
 
 You can use an assertion to test a nonpublic method's precondition that you believe will be true no matter what a client does with the class.
@@ -102,7 +101,7 @@ private void setRefreshInterval(int interval) {
 ```
 
 
-Do not use assertions to do any work that your application requires for correct operation.
+#### Do not use assertions to do any work that your application requires for correct operation.
 
 ```
 // Broken! - action is contained in assertion
