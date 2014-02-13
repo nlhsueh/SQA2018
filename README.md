@@ -4,13 +4,12 @@ Software Quality Assurance
 Sample code for software quality assurance at FCU
 
 
-### debugging 
----
+### Debugging 
 - read debug view
 - description: use debugging tool to solve the problem in the /debug/BubbleSort
 
 
-### assertion
+### Assertion
 read [assertion](/debug/Assertion.md) first
 
 ### JUnit
