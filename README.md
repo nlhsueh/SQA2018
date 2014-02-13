@@ -1,4 +1,4 @@
-sqa
+Software Quality Assurance- Sample Code
 ===
 
 Sample code for software quality assurance at FCU
