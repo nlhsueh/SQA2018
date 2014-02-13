@@ -1,4 +1,4 @@
-Software Quality Assurance- Sample Code
+Software Quality Assurance
 ===
 
 Sample code for software quality assurance at FCU
