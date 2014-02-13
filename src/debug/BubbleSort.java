@@ -3,7 +3,7 @@ package debug;
 import java.util.Random;
 
 /**
- * This program has a defect, please use debug tool to find out it and fix it
+ * This program has a bug, please use debug tool to find out it and fix it
  *
  */
 public class BubbleSort {	
@@ -28,15 +28,15 @@ public class BubbleSort {
 	}
 	
 	public void bubbleSort(int[] data) {
-		int length = data.length;
-		int temp=0;
+		int length = data.length-1;
+		int temp=0;		
 		
 		for (int path=0; path<length; path++) {
 			for (int i=0; i<length-path; i++) {
 				if (data[i] > data[i+1]) {
 					temp = data[i];
-					data[i] = data[i+1];
-					data[i+1] = temp;
+					data[i] = temp;
+					data[i+1] = data[i];
 				}
 			}
 		}		
