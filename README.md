@@ -5,7 +5,7 @@ Sample code for software quality assurance at FCU
 
 
 ### Debugging 
-- read debug view
+- read [debug](/debug/Debug.md) first
 - description: use debugging tool to solve the problem in the /debug/BubbleSort
 
 
