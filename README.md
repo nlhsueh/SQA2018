@@ -11,7 +11,7 @@ Sample code for software quality assurance at FCU
 Lab: 
 - use for loop to write a program for sin(x), use debugging techniques in debug view to help you
 
-sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
+    sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 
 
 ### Assertion
