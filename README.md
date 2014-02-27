@@ -16,7 +16,7 @@ Lab2: 應⽤用迴圈來寫⼀一個程式計算 sin(x),其中 x 為⼀一個數
 sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 ```
 
-- Expression: 可以觀看一個表達式的結果，特別是用在邏輯判斷上很好用
+Expression view: 可以觀看一個表達式的結果，特別是用在邏輯判斷上很好用
 - Add another view: 可在 variable view 及 expression view 點選 `open new view` 來針對某一個特別的變數或表達式做觀察。
 - 閱讀更多 [expression view](http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fdebug%2Fref-debug_view.htm)
 
