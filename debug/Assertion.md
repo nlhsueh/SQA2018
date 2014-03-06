@@ -1,7 +1,9 @@
 Assertion
 ===
 
-An assertion is a statement in the Java programming language that enables you to test your assumptions about your program. For example, if you write a method that calculates the speed of a particle, you might assert that the calculated speed is less than the speed of light.
+>   幾乎百分百的確認，但在開發階段，我們還是會謹慎一點。
+
+An assertion 斷言 is a statement in the Java programming language that enables you to test your `assumptions` about your program. For example, if you write a method that calculates the speed of a particle, you might assert that the calculated speed is less than the speed of light.
 
 Each assertion contains a boolean expression that you believe will be true when the assertion executes. If it is not true, the system will throw an error. 
 
@@ -20,7 +22,7 @@ Form 1
 Form 2
 
      assert Expression1 : Expression2 ; 
-￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ 
+ 
 Expression1 is a boolean expression. Expression2 is an expression that has a value. 
 
 Enable and disable
@@ -59,7 +61,11 @@ Because this method checks a constraint that should be true before and after any
 assert balanced();
 ```
 
+> 類別內任何物件、任何方法執行後都會 balance (例如會計的帳）, 所以就執行一下 assert
+
 #### Control-Flow Invariants
+
+> 對控制流程的斷言
 
 ```
 void foo() { 
@@ -73,6 +79,8 @@ void foo() {
 #### Postconditions
 
 You can test postcondition with assertions in both public and nonpublic methods. 
+
+> 在一段複雜的運算後，你斷定會成為真的事情，用斷言來加強。
 
 ```
 public BigInteger modInverse(BigInteger m) {
@@ -89,6 +97,7 @@ public BigInteger modInverse(BigInteger m) {
 
 #### Do not use assertions for argument checking in public methods.
 
+> 公開方法對參數的檢查本來就應該做，不要用 assertion 來檢查。
 
 You can use an assertion to test a nonpublic method's precondition that you believe will be true no matter what a client does with the class.
 
@@ -103,11 +112,13 @@ private void setRefreshInterval(int interval) {
 
 #### Do not use assertions to do any work that your application requires for correct operation.
 
+> 不要把程式整成該做的工作放在 assert 中。因為 assert 以後可能會被移除。
+
 ```
-// Broken! - action is contained in assertion
+// wrong! - action is contained in assertion
 assert names.remove(null);
 
-// Fixed - action precedes assertion
+// right - action precedes assertion
 boolean nullsRemoved = names.remove(null);
 assert nullsRemoved; // Runs whether or not asserts are enabled
 ```

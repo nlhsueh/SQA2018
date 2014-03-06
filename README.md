@@ -26,6 +26,10 @@ Lab3: 改寫 Lab2, 一開始迴圈只跑3, 每次增加 2 個，一直到相鄰�
 ### Assertion
 read [assertion](/debug/Assertion.md) first
 
+Lab 1: 學期成績由期中考、期末考、平成成績所組成，各佔 30%, 30%, 40%。計算出的成績應該小於 100 分，請用斷言來確保最後成績的正確。
+
+Lab 2: 經過 Sort 後，我們斷言第一個元素一定比第二個元素小，請用 assert 來完成。
+
 ### JUnit
 
 ### JMeter
