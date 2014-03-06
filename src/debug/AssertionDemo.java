@@ -2,11 +2,13 @@ package debug;
 
 import java.util.Scanner;
 
+/*
+ * To demo how to use assertion to make your program robust
+ * 1. to make the assertion work, you must enable it. 
+ * 2. enable the assertion: run configuration >> Arguments >> VM arguments: -ea
+ */
 public class AssertionDemo {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		AssertionDemo demo = new AssertionDemo();
 		Scanner scanner = new Scanner(System.in);
@@ -18,7 +20,7 @@ public class AssertionDemo {
 			// no assert
 			System.out.println(input % 3);
 			demo.check1(input);
-			
+
 			// using assert
 			demo.check2(input);
 
@@ -37,12 +39,14 @@ public class AssertionDemo {
 		c.m1();
 	}
 
+	// assert is not use
 	private void check1(int value) {
 		if (value % 3 == 0) {
 			System.out.println("3n");
 		} else if (value % 3 == 1) {
 			System.out.println("3n+1");
-		} else { // value %3 ==2
+		} else {
+			// value %3 ==2
 			System.out.println("3n+2");
 		}
 	}
@@ -80,6 +84,9 @@ public class AssertionDemo {
 	}
 }
 
+/*
+ * 這個程式只是為了 demo 呼叫 check 時，若帶入一個錯誤的值，被呼叫端應該要處理（拋出例外），而非只是 assert
+ */
 class Caller {
 
 	void m1() {

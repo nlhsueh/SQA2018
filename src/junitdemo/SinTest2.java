@@ -1,9 +1,10 @@
-package debug;
+package junitdemo;
 
 import static org.junit.Assert.*;
 import junit.framework.Assert;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class SinTest2 {
@@ -19,6 +20,7 @@ public class SinTest2 {
 		Assert.assertEquals(0.5, s.sin((Math.PI)/6), 0.1);
 	}
 
+	@Ignore("no ready")
 	@Test
 	public void testSinDoubleInt() {
 		// fail("Not yet implemented");
