@@ -141,7 +141,7 @@ public BigInteger modInverse(BigInteger m) {
 }
 ```
 
-### Do NOT use 
+### 什麼時候不該使用 Assertion?
 
 
 #### 1. 不要使用 assertion 來做公開方法的參數檢查
@@ -237,18 +237,31 @@ class WrongGradeException extends Exception {
 Unit 3x: JUnit
 ===
 
-開發流程
----
+###開發流程
+
 1. 設計程式框架
 2. 設計測試案例：利用 JUnit 設計測試案例。
 3. 執行測試碼：執行 JUnit 測試碼，會跑出很多的『錯誤』。
 4. 撰寫程式
 5. 執行測試碼：執行 JUnit 測試碼，錯誤應該會逐漸減少。
 
-語法
----
 
-###@Test
+### 用法
+[JUnit API](http://junit.sourceforge.net/javadoc/)
+
+org.junit.Assert
+* assertEquals()
+* assertTrue()
+* assertArrayEquals()
+* assertSame()
+* assertNotNull
+* assertNull
+* fail()
+
+
+###語法
+
+####@Test
 
 Mark your test cases with `@Test` annotations. You don’t need to prefix your test cases with “test”.  In addition, your class does not need to extend from “TestCase” class.
 
@@ -267,7 +280,7 @@ public void subtraction() {
 }
 ```
 
-### @Before and @After
+#### @Before and @After
 
 Use @Before and @After annotations for “setup” and “tearDown” methods respectively. They run before and after every test case.
 
@@ -277,17 +290,17 @@ public void runBeforeEveryTest() {
    simpleMath = new SimpleMath();
 }
 ```
-
+```
 @After
 public void runAfterEveryTest() {
    simpleMath = null;
 }
-[/source]
+```
 
-### @BeforeClass and @AfterClass
+#### @BeforeClass and @AfterClass
 
-Use @BeforeClass and @AfterClass annotations for class wide “setup” and “tearDown” respectively. Think them as one time setup and tearDown. They run for one time before and after all test cases.
-[source:Java]
+Use @**BeforeClass** and @**AfterClass** annotations for class wide “setup” and “tearDown” respectively. Think them as one time setup and tearDown. They run for one time before and after all test cases.
+
 ```
 @BeforeClass
 public static void runBeforeClass() {
@@ -301,10 +314,9 @@ public static void runAfterClass() {
 }
 ```
 
-### Exception Handling
+#### Exception Handling
 
-Use “expected” paramater with @Test annotation for test cases that expect exception. Write the class name of the exception that will be thrown.
-[source:Java]
+Use “**expected**” paramater with @Test annotation for test cases that expect exception. Write the class name of the exception that will be thrown.
 
 ```
 @Test(expected = ArithmeticException.class)
@@ -314,10 +326,9 @@ public void divisionWithException() {
 }
 ```
 
-### @Ignore
----
+#### @Ignore
+
 Put @Ignore annotation for test cases you want to ignore. You can add a string parameter that defines the reason of ignorance if you want.
-[source:Java]
 
 ```
 @Ignore(“Not Ready to Run”)
@@ -327,9 +338,9 @@ public void multiplication() {
 }
 ```
 
-### Timeout
+#### Timeout
 
-Define a timeout period in miliseconds with “timeout” parameter. The test fails when the timeout period exceeds.
+Define a timeout period in **miliseconds** with “timeout” parameter. The test fails when the timeout period exceeds.
 
 ```
 @Test(timeout = 1000)
@@ -339,15 +350,17 @@ public void infinity() {
 }
 ```
 
-### Array
+#### Array
 
 Compare arrays with new assertion methods. Two arrays are equal if they have the same length and each element is equal to the corresponding element in the other array; otherwise, they’re not.
 
-
+```
 public static void assertEquals(Object[] expected, Object[] actual);
+```
 
+```
 public static void assertEquals(String message, Object[] expected, Object[] actual);
-
+```
 
 ```
 @Test
@@ -363,9 +376,18 @@ public void listEquality() {
 ```
 
 
-Unit 4x: EclEmma
+Unit 4x: Testing Coverage
 ===
+Testing coverage with JUnit and EclEmma
 
+### Install EclEmma
+
+[Link of EclEmma](http://www.eclemma.org/)
+
+### 如何判斷程式的涵蓋度？
+* 紅色：表示一次都沒有執行過
+* 黃色：部分執行
+* 綠色：未執行
 
 
 Unit 5x: Improving testability
@@ -374,4 +396,76 @@ Unit 5x: Improving testability
 Using Logging
 ---
 Use logging to improve the testability
+
+> Logging 是專業程式的表現
+
+### Overview of Control Flow
+
+Application make logging calls on **Logger** object.
+
+Logger allocates LogRecord Object
+
+Logger pass LogRecord to Handler
+
+### LEVEL
+From Level.FINEST to Level.SEVERE
+
+* SEVERE (highest value)
+* WARNING
+* INFO
+* CONFIG
+* FINE
+* FINER
+* FINEST (lowest value)
+
+### Formatters
+Java SE also includes two standard Formatters:
+
+- **SimpleFormatter**: Writes brief "human-readable" summaries of log records.
+- **XMLFormatter**: Writes detailed XML-structured information.
+
+### Handlers
+Java SE provides the following Handlers:
+
+- **StreamHandler**: A simple handler for writing formatted records to an OutputStream.
+- ConsoleHandler: A simple handler for writing formatted records to System.err
+- **FileHandler**: A handler that writes formatted log records either to a single file, or to a set of rotating log files.
+- **SocketHandler**: A handler that writes formatted log records to remote TCP ports.
+- **MemoryHandler**: A handler that buffers log records in memory.
+
+### Example
+
+```
+public class LoggerDemo {
+
+	// Obtain a suitable logger.
+	private static Logger logger = Logger.getLogger("debug.LoggerDemo");
+
+	private static FileHandler fh;
+
+	public static void main(String argv[]) {
+
+		try {
+			fh = new FileHandler("mylog.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// Log a FINE tracing message
+		logger.fine("doing stuff");
+
+		// Add two handler
+		logger.addHandler(new ConsoleHandler());
+		logger.addHandler(fh);
+		try {
+			div(100, 0);
+		} catch (Exception ex) {
+			// Log the exception
+			logger.log(Level.WARNING, "", ex);
+		}
+		logger.fine("done");
+	}
+}
+```	
+	
 
