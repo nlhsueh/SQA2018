@@ -3,6 +3,7 @@ Software Quality Assurance
 
 Sample code for software quality assurance at FCU
 
+Read [Lecture notes](LectureNotes.md)
 
 ### Topic 1: Debugging 
 
