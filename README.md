@@ -5,9 +5,7 @@ Sample code for software quality assurance at FCU
 
 Read [Lecture notes](LectureNotes.md)
 
-### Topic 1: Debugging 
-
-Read [debug](/debug/Debug.md) and [Eclipse debug perspective](/debug/DebugView.md).
+### Topic 1: [Debugging](LectureNotes.md/#unit-1x-debugging)
 
 **Lab 1**: debug this [program](/src/debug/BubbleSort.java)
 
@@ -20,8 +18,6 @@ sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 **Lab 3**: 改寫 Lab2, 一開始迴圈只跑3, 每次增加 2 個，一直到相鄰的兩次`新增迴圈`所得到的值小於 0.00001。請利用 debugging 的各種 view 來協助擬進行此程式。或使用這個 [buggy sample code](/src/debug/Sin.java) 來除錯。
 
 ### Topic 2: Assertion
-
-Read [assertion](/debug/Assertion.md) and the [sample code](/src/debug/AssertionDemo.java)
 
 **Lab 1**: 學期成績由期中考、期末考、平成成績所組成，各佔 30%, 30%, 40%。計算出的成績應該小於 100 分，請用斷言來確保最後成績的正確。
 
