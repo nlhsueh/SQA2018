@@ -234,6 +234,8 @@ class WrongGradeException extends Exception {
 }
 ```
 
+Read the [demo code](src/debug/ExceptionDemo.java).
+
 Unit 3x: JUnit
 ===
 
