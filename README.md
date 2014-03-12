@@ -23,7 +23,7 @@ sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 
 **Lab 2**: 經過 Sort 後，我們斷言第一個元素一定比第二個元素小，請用 assert 來完成。
 
-#### [Exception] (LectureNotes.md/#exception)
+#### [Exception] (LectureNotes.md/#exception-handling)
 
 
 ### Unit 3x [JUnit](LectureNotes.md/#unit-3x-junit)
