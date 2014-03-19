@@ -23,6 +23,8 @@ sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 
 **Lab 2**: 經過 Sort 後，我們斷言第一個元素一定比第二個元素小，請用 assert 來完成。
 
+**Lab 1**: 修改 [ExceptionDemo.java](src/debug/ExceptionDemo.java) 中的 getGradeAverage，當學生個數為 0 時，會拋出一個 NoStudentException。	
+
 #### [Exception] (LectureNotes.md/#exception-handling)
 
 
