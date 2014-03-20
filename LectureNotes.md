@@ -385,7 +385,7 @@ public void listEquality() {
 ### Demo
 
 - *SimpleAdd* example: [Source code](src/junitdemo/SimpleAdd.java) and its [junit test code](src/junitdemo/SimpleAddTest.java)
-- *Sin* example: [Source code](src/junitdemo/Sin.java) and its [junit test code](src/junitdemo/SinTest.java)
+- *Sin* example: [Source code](src/junitdemo/Sin.java) and its [junit test code](src/junitdemo/SinTest2.java)
 
 
 Unit 4x: Testing Coverage
