@@ -251,6 +251,8 @@ Unit 3x: JUnit
 ### 用法
 [JUnit API](http://junit.sourceforge.net/javadoc/)
 
+記得要 import org.junit.Assert.*;
+
 org.junit.Assert
 * assertEquals()
 * assertTrue()
@@ -260,8 +262,11 @@ org.junit.Assert
 * assertNull
 * fail()
 
+### Eclipse
 
-###語法
+在 Eclipse 時使用時很方便，在你愈測試的類別中按右鍵點選 New >> Junit class 就可以新增 junit class。也可以直接新增 junit class 時選擇所要測試的類別及方法。
+
+###重要語法
 
 ####@Test
 
@@ -376,6 +381,11 @@ public void listEquality() {
    assertEquals(expected, actual);
 }
 ```
+
+### Demo
+
+- *SimpleAdd* example: [Source code](src/junitdemo/SimpleAdd.java) and its [junit test code](src/junitdemo/SimpleAddTest.java)
+- *Sin* example: [Source code](src/junitdemo/Sin.java) and its [junit test code](src/junitdemo/SinTest.java)
 
 
 Unit 4x: Testing Coverage

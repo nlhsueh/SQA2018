@@ -23,12 +23,28 @@ sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 
 **Lab 2**: 經過 Sort 後，我們斷言第一個元素一定比第二個元素小，請用 assert 來完成。
 
-**Lab 1**: 修改 [ExceptionDemo.java](src/debug/ExceptionDemo.java) 中的 getGradeAverage，當學生個數為 0 時，會拋出一個 NoStudentException。	
-
 #### [Exception] (LectureNotes.md/#exception-handling)
+
+**Lab 1**: 修改 [ExceptionDemo.java](src/debug/ExceptionDemo.java) 中的 getGradeAverage，當學生個數為 0 時，會拋出一個 NoStudentException。	
 
 
 ### Unit 3x [JUnit](LectureNotes.md/#unit-3x-junit)
+
+Lab 1: 寫一個程式來依據 BMI 檢驗體重是否過重。BMI = 體重 (kg) / 身高 (m2)。其分級如下：
+* 體重過輕	BMI ＜ 18.5
+* 正常範圍	18.5 ≦ BMI ＜24
+* 過    重	24 ≦ BMI ＜ 27
+* 輕度肥胖	27 ≦ BMI ＜ 30
+* 中度肥胖	30 ≦ BMI ＜ 35
+* 重度肥胖	BMI ≧ 35
+
+開發流程
+
+1. design class *Health.checkBMI(): String*
+2. design *HealthTest.checkBMITest()*
+3. implement *Health.checkBMI()*
+4. test *checkBMI()* by *checkBMITest()*
+
 
 ### Unit 4x Test coverage
 
