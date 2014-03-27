@@ -1,12 +1,12 @@
 package httpDemo;
 
-import tw.edu.fcu.iecs.selab.apiDemo.apiClient.ApiClient;
+import httpClient.HTTPClient;
 
-public class ClientExample {
+public class ClientDemo {
 	public static void main(String[] args) {
 		
 		
-		ApiClient apiClient = new ApiClient();
+		HTTPClient apiClient = new HTTPClient();
 		
 		System.out.println(apiClient.getData("getDate", null));
 		String[] commandArgs = {"a=1","b=2","c=3"};

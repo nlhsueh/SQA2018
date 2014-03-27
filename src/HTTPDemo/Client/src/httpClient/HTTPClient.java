@@ -13,7 +13,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 
 
 
-public class ApiClient {
+public class HTTPClient {
 
 
 	private String apiURL = "http://localhost/apiDemo/api.php";
