@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="Big5" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2014-03-07T20:22:34</date>
+  <millis>1394194954064</millis>
+  <sequence>1</sequence>
+  <logger>debug.LoggerDemo</logger>
+  <level>WARNING</level>
+  <class>debug.LoggerDemo</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message></message>
+  <exception>
+    <message>java.lang.Exception: divid by zero</message>
+    <frame>
+      <class>debug.LoggerDemo</class>
+      <method>div</method>
+      <line>41</line>
+    </frame>
+    <frame>
+      <class>debug.LoggerDemo</class>
+      <method>main</method>
+      <line>31</line>
+    </frame>
+  </exception>
+</record>
+</log>
