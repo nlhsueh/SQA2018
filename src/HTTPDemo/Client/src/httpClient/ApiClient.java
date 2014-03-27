@@ -1,4 +1,5 @@
-package tw.edu.fcu.iecs.selab.apiDemo.apiClient;
+package httpClient;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

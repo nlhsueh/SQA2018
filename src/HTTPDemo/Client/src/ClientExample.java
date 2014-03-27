@@ -1,4 +1,4 @@
-package tw.edu.fcu.iecs.selab.apiDemo;
+package httpDemo;
 
 import tw.edu.fcu.iecs.selab.apiDemo.apiClient.ApiClient;
 
