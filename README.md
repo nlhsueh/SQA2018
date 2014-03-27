@@ -15,6 +15,8 @@ sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 
 **Lab 3**: 改寫 Lab2, 一開始迴圈只跑3, 每次增加 2 個，一直到相鄰的兩次`新增迴圈`所得到的值小於 0.00001。請利用 debugging 的各種 view 來協助擬進行此程式。或使用這個 [buggy sample code](/src/debug/Sin.java) 來除錯。
 
+-----
+
 ### Unit 2x Defensive Programming
 
 #### [Assertion](LectureNotes.md/#assertion)
@@ -27,10 +29,11 @@ sin(x) = x - (x^3/3!) + (x^5/5!) - (x^7/7!) + ...
 
 **Lab 1**: 修改 [ExceptionDemo.java](src/debug/ExceptionDemo.java) 中的 getGradeAverage，當學生個數為 0 時，會拋出一個 NoStudentException。	
 
+-----
 
 ### Unit 3x [JUnit](LectureNotes.md/#unit-3x-junit)
 
-Lab 1: 寫一個程式來依據 BMI 檢驗體重是否過重。BMI = 體重 (kg) / 身高 (m2)。其分級如下：
+**Lab 1**: 寫一個程式來依據 BMI 檢驗體重是否過重。BMI = 體重 (kg) / 身高 (m2)。其分級如下：
 * 體重過輕	BMI ＜ 18.5
 * 正常範圍	18.5 ≦ BMI ＜24
 * 過    重	24 ≦ BMI ＜ 27
@@ -45,6 +48,15 @@ Lab 1: 寫一個程式來依據 BMI 檢驗體重是否過重。BMI = 體重 (kg)
 3. implement *Health.checkBMI()*
 4. test *checkBMI()* by *checkBMITest()*
 
+**Lab 2**: 寫一個程式判斷三角形。輸入的參數是三邊的長，若不符合三角形定義（任兩邊和大於第三邊）則會拋出例外。否則回傳 "一般三角形"、"等腰三角形"、"正三角形"等。開發之前，請先建立 JUnit 測試案例，並使用 **@Test(expected=...)** 的方式來測試例外。
+
+Hint: public String check(int a, int b, int c) throws Exceptions
+
+Hint: 參考 [SimpleTest](src/junitdemo/SimpleAddTest.java)
+
+**Lab 3**: 針對一個排序程式設計測試案例 SortTest，每一次測試之前會先做一些初始化：從檔案中讀取資料，寫到陣列 data[]中，SortTest 中的 testSort() 再針對 data[] 中的資料做排序。請利用 **@Before** 來完成此工作。
+
+**Lab 4**: 寫一個無窮迴圈的程式，並使用 junit 來測試。利用 **timeout** 的參數來跳出迴圈。
 
 ### Unit 4x Test coverage
 
