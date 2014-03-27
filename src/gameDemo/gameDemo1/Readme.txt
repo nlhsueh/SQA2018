@@ -25,10 +25,6 @@ ps:當 server 端進入等待狀態後僅有30秒連線時間
 
 本程式只能一對一對戰，是由一支聊天程式改的
 
-聊天程式原出處 http://caterpillar.onlyfun.net/Gossip/JavaGossip-V2/OneToOneChat.htm
 
-我的個人網站 http://www.donnolove.somee.com/Default.aspx
 
-blog http://www.wretch.cc/blog/donnolove
-
-此程式是上課的作業，寫的手法很粗糙請見諒
+註：此程式為網路上之範例程式，原出處為 http://www.blueshop.com.tw/download/show.asp?pgmcde=PGM20090720192618F9S
