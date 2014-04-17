@@ -399,7 +399,7 @@ Eclipse > Help > Install New Software > Add > “http://update.eclemma.org/"
 ### 如何判斷程式的涵蓋度？
 * 紅色：表示一次都沒有執行過
 * 黃色：部分執行
-* 綠色：未執行
+* 綠色：已執行
 
 
 Unit 5x: Improving testability
