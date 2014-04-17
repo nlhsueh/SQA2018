@@ -58,7 +58,7 @@ Hint: 參考 [SimpleTest](src/junitdemo/SimpleAddTest.java)
 
 **Lab 4**: 寫一個無窮迴圈的程式，並使用 junit 來測試。利用 **timeout** 的參數來跳出迴圈。
 
-### Unit 4x Test coverage (LectureNotes.md/#unit-4x-testing-coverage)
+### Unit 4x [Test coverage](LectureNotes.md/#unit-4x-testing-coverage)
 
 **Lab 1**: 寫一個程式判斷三角形，並寫一點 JUnit 測試碼，執行測試時，改以 EclEmma 來測試此程式。EclEmma 會標示你沒有測試到的部份，這時候在加上 JUnit 測試碼，逐步提高測試率。
 
