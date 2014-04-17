@@ -394,7 +394,7 @@ Testing coverage with JUnit and EclEmma
 
 ### Install EclEmma
 
-[Link of EclEmma](http://www.eclemma.org/)
+Eclipse > Help > Install New Software > Add > “http://update.eclemma.org/"
 
 ### 如何判斷程式的涵蓋度？
 * 紅色：表示一次都沒有執行過
