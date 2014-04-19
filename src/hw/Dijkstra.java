@@ -9,7 +9,7 @@ class Vertex implements Comparable<Vertex> {
 	public final String name;
 	public Edge[] adjacencies;
 	public double minDistance = Double.POSITIVE_INFINITY;
-	public Vertex previous;
+	public Vertex previous; 
 
 	public Vertex(String argName) {
 		name = argName;
@@ -69,6 +69,7 @@ public class Dijkstra {
 		return path;
 	}
 
+	//你應該用 junit 來取代這裡的 main
 	public static void main(String[] args) {
 		
 		// mark all the vertices
