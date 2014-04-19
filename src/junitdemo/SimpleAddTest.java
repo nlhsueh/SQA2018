@@ -74,7 +74,11 @@ public class SimpleAddTest {
 	public void testArrayAdd() {
 		try {
 			assertArrayEquals(new int[] { 2, 2, 2 },
+					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 1, 2 }));
+			assertArrayEquals(new int[] { 2, 2, 2 },
 					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 1, 1 }));
+			assertArrayEquals(new int[] { 2, 2, 2 },
+					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 3, 1 }));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -87,6 +91,8 @@ public class SimpleAddTest {
 	public void testArrayAddWithException() throws Exception {
 		assertArrayEquals(new int[] { 2, 2, 2 },
 				a.add4(new int[] { 1, 1 }, new int[] { 1, 1, 1 }));
-	}
+
+	}	
+
 
 }
