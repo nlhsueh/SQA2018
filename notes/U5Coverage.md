@@ -27,5 +27,13 @@ Laboratory
 * 重度肥胖	BMI ≧ 35
 
 請用 EclEmma 來測試。
+
+**Lab3**: 以下是一個最短路徑的程式，請改以 JUnit 的方式來測試它，並提昇包含度。
+
+[Dijkstra program](src/junitdemo/Dijkstra.java)
+
+Lab4: 以下是一個轉前序與後序的程式。請改以 JUnit 的方式來測試它，並提昇包含度。
+
+[Infix program](src/junitdemo/Infix.java)
 	
 

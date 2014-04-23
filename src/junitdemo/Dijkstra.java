@@ -1,4 +1,4 @@
-package hw;
+package junitdemo;
 
 import java.util.PriorityQueue;
 import java.util.List;
