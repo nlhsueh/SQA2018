@@ -45,3 +45,15 @@ Lab5: Recording II
 
 1. 建立一個 Recorder 擷取登入 Yahoo,以及在網站中進行各種活動的動作。 
 2. 檢視 Recorder,觀察哪些動作被記錄下來。3. 用 HTTP Proxy 和正規表達式(Regular Expression),篩選出 .jpg 和 .gif 的檔案。
+
+Selenium
+===
+
+Install Selenium
+---
+1. visit [web site] (http://docs.seleniumhq.org/)
+2. choose Download
+3. ... Download latest released version 2.5.0 released on 01/Jan/2014 or view the Release Notes and then install some plugins. ==> click `2.5.0` to download
+
+Read the [doc](http://docs.seleniumhq.org/docs/index.jsp) to see how does it work.
+
