@@ -1,6 +1,8 @@
 Unit 1x: Debugging
 ===
 
+[投影片-Debugging](https://sky.fcu.edu.tw/navigate/s/9C746B4399C7409A8488F093B7026B75XSY)
+
 Basic concept
 ---
 
