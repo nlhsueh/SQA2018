@@ -45,9 +45,15 @@ Debug 面板是一個可以方便你除錯的面板。包含以下的功能
 - Breakpoint 中斷點。可以讓你在除錯模式下讓程式暫時停在某一點，這時候在一步步的追蹤你的程式。[Eclipse breakpoint view](http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fdebug%2Fref-debug_view.htm).
 - Variable view，變數觀察。可以讓你觀察程式執行過程中變數的變化，有了這個功能，你就不用一直把變數印出來。[Eclipse variable view](http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fdebug%2Fref-debug_view.htm).
 - Expression view: 可以觀看一個表達式的結果，特別是用在邏輯判斷或複雜的計算上很好用
-- Hint count: 當 breakpoint 符合某些條件時才停止程式執行。避免當程式在大量迴圈時浪費時間。[see here] (http://www.vogella.com/tutorials/EclipseDebugging/article.html#advanced_properties)
-- watchpoint: 當某一個變數的值被 access 或 修改時，停在那裡。設定方法：在該變數的宣告區加上 breakpoint [see here](http://www.vogella.com/tutorials/EclipseDebugging/article.html#advanced_watchpoint)
 - Add another view: 可在 variable view 及 expression view 點選 `open new view` 來針對某一個特別的變數或表達式做觀察。[expression view](http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fdebug%2Fref-debug_view.htm).
+
+Variable watch 時可以改變要輸出的格式，例如輸出 p.toString() 會印出記憶體位址，但這對我們沒有幫助，可以在 debugger 中改為 getAge(). [see here](http://www.vogella.com/tutorials/EclipseDebugging/article.html#usedebug_debugger)
+ 
+過多的中斷讓除錯很費時，可以透過以下方式來改善：
+- Conditional breakpoint: 當 breakpoint 符合某些條件時才中段程式執行。避免當程式在大量迴圈時浪費時間。[see here] (http://www.vogella.com/tutorials/EclipseDebugging/article.html#advanced_properties)
+- Watchpoint: 當某一個變數的值被 access 或 修改時，停在那裡。設定方法：在該變數的宣告區加上 breakpoint [see here](http://www.vogella.com/tutorials/EclipseDebugging/article.html#advanced_watchpoint)
+- Hint count: 達到 Hint count 次數後停一次。
+
 
 
 [Eclipse debug view](http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fdebug%2Fref-debug_view.htm) 介紹 debug 面板內的 icon 的意義。
