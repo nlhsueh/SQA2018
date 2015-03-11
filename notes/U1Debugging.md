@@ -53,7 +53,7 @@ Variable watch 時可以改變要輸出的格式，例如輸出 p.toString() 會
 - Conditional breakpoint: 當 breakpoint 符合某些條件時才中段程式執行。避免當程式在大量迴圈時浪費時間。[see here] (http://www.vogella.com/tutorials/EclipseDebugging/article.html#advanced_properties)
 - Watchpoint: 當某一個變數的值被 access 或 修改時，停在那裡。設定方法：在該變數的宣告區加上 breakpoint [see here](http://www.vogella.com/tutorials/EclipseDebugging/article.html#advanced_watchpoint)
 - Hint count: 達到 Hint count 次數後停一次。
-
+- 多多利用 breakpoint 的管理視窗，依據你的測試狀況打開或關閉不同的中斷點。
 
 
 [Eclipse debug view](http://help.eclipse.org/indigo/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fviews%2Fdebug%2Fref-debug_view.htm) 介紹 debug 面板內的 icon 的意義。
