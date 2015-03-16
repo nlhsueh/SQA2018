@@ -21,6 +21,8 @@ Unit 2x: Assertion
 
 為了讓 assertion 不會造成程式的負擔，你可以在編譯的時候決定是否要將 assertion 啟動（enable）。預設是不啟動的。To ensure that assertions are not a performance liability in deployed applications, assertions can be enabled or disabled when the program is started, and are disabled by default.
 
+[Eclipse 中如何啟動 assertion](http://stackoverflow.com/questions/11415160/how-to-enable-the-java-keyword-assert-in-eclipse-program-wise)
+
 ### 什麼時候該用 Invariant?
 
 #### 1. 方法內部的不變式 Internal Invariants
@@ -87,6 +89,8 @@ public BigInteger modInverse(BigInteger m) {
 
 > 公開方法對參數的檢查本來就應該做，不要用 assertion 來檢查。
 
+公開的方法表示會有很多其他人會呼叫此方法，傳入各種不同的參數，為了避免他們傳錯，方法本來就必須測試這些參數，所以不該用斷言的方式來檢查。
+
 You can use an assertion to test a nonpublic method's precondition that you believe will be true no matter what a client does with the class.
 
 ```
@@ -96,6 +100,8 @@ private void setRefreshInterval(int interval) {
    ... // Set the refresh interval 
 }
 ```
+
+想反的，若是私有方法，其參數的約定式內部的，我們應該很清楚的知道不該有那樣不正確的參數傳入，所以可以用斷言。如果真的傳入奇怪的參數，就會拋出例外。
 
 #### 2. 不要使用 assertion 來執行任何與程式邏輯相關的操作
 
