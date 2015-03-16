@@ -19,11 +19,11 @@ Unit 2x: Assertion
 
 ### Enable and disable
 
-To ensure that assertions are not a performance liability in deployed applications, assertions can be enabled or disabled when the program is started, and are disabled by default.
+為了讓 assertion 不會造成程式的負擔，你可以在編譯的時候決定是否要將 assertion 啟動（enable）。預設是不啟動的。To ensure that assertions are not a performance liability in deployed applications, assertions can be enabled or disabled when the program is started, and are disabled by default.
 
 ### 什麼時候該用 Invariant?
 
-#### 1. Internal Invariants
+#### 1. 方法內部的不變式 Internal Invariants
 
 ```
 if (i % 3 == 0) {
@@ -31,14 +31,14 @@ if (i % 3 == 0) {
 } else if (i % 3 == 1) {
    ...
 } else {
-   assert i % 3 == 2 : i;
+   assert i % 3 == 2 : i; //我斷言前面的條件若不滿足，則 i%2 一定會等於 2
    ...
 }
 ```
 
-#### 2. Class invariant
+#### 2. 類別的不變式 Class invariant
 
-A class invariant is a predicate that `must be true before and after` any method completes. In the stack example, the invariant would be that the number of elements in the stack is greater than or equal to zero and the number of elements should not exceed the maximum capacity of the class. These conditions, for example, can be coded as follows:
+類別不變式表示該物件任何方法執行的前後都恆真的式子，例如一個 Stack 物件內部元素的個數一定介於 0 與最大值之間。
 
 ```
 private boolean inv() {
@@ -46,13 +46,13 @@ private boolean inv() {
 }
 ```
 
-To check that the stack should satisfy this predicate at all times, each public method and constructor should contain the assertion
+所以我們可以在執行任何動作之後呼叫 inv() 來檢查是否發生異常。
 
     assert inv();
 
 right before each return.
 
-#### 3. Control-Flow Invariants 不變的控制流
+#### 3. 不變的控制流 Control-Flow Invariants 
 
 對控制流程的斷言，"我相信絕對不會到 05 行"
 ```
@@ -64,7 +64,9 @@ right before each return.
 06 }
 ```
 
-#### 4. Postconditions 後置條件
+如此，萬一真的跑到 05, 系統就會拋出例外警告。
+
+#### 4. 後置條件 Postconditions 
 
 在一段複雜的運算後，你斷定會成為真的事情，用斷言來加強。
 
