@@ -146,7 +146,9 @@ public void listEquality() {
 
 ### Demo
 
-- *SimpleAdd* example: [Source code](src/junitdemo/SimpleAdd.java) and its [junit test code](src/junitdemo/SimpleAddTest.java)
+https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAdd.java
+
+- *SimpleAdd* example: [Source code](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAdd.java) and its [junit test code](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAddTest.java)
 - *Sin* example: [Source code](src/junitdemo/Sin.java) and its [junit test code](src/junitdemo/SinTest2.java)
 
 Laboratory
