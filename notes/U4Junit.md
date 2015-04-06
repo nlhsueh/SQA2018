@@ -149,7 +149,7 @@ public void listEquality() {
 https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAdd.java
 
 - *SimpleAdd* example: [Source code](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAdd.java) and its [junit test code](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAddTest.java)
-- *Sin* example: [Source code](src/junitdemo/Sin.java) and its [junit test code](src/junitdemo/SinTest2.java)
+- *Sin* example: [Source code](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/Sin.java) and its [junit test code](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SinTest2.java)
 
 Laboratory
 ---
@@ -173,7 +173,7 @@ Laboratory
 
 Hint: public String check(int a, int b, int c) throws Exceptions
 
-Hint: 參考 [SimpleTest](src/junitdemo/SimpleAddTest.java)
+Hint: 參考 [SimpleTest](https://github.com/nlhsueh/sqa/blob/master/src/junitdemo/SimpleAddTest.java)
 
 **Lab 3**: 針對一個排序程式設計測試案例 SortTest，每一次測試之前會先做一些初始化：從檔案中讀取資料，寫到陣列 data[]中，SortTest 中的 testSort() 再針對 data[] 中的資料做排序。請利用 **@Before** 來完成此工作。
 
