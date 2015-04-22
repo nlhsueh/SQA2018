@@ -61,13 +61,13 @@ class WrongGradeException extends Exception {
 }
 ```
 
-Read the [demo code](src/debug/ExceptionDemo.java).
+Read the [demo code](../src/debug/ExceptionDemo.java).
 
 
 Labtoratory
 ---
 
-**Lab 1**: 修改 [ExceptionDemo.java](src/debug/ExceptionDemo.java) 中的 getGradeAverage，當學生個數為 0 時，會拋出一個 NoStudentException。	
+**Lab 1**: 修改 [ExceptionDemo.java](../src/debug/ExceptionDemo.java) 中的 getGradeAverage，當學生個數為 0 時，會拋出一個 NoStudentException。	
 
 	
 
