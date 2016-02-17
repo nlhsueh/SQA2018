@@ -1,8 +1,6 @@
 package debug;
 
 /*
- * ³o¬O¤@­Ó¦³ bug ªºµ{¦¡¡A½ĞÀ³¥Î debug ªºÆ[©À»P¤u¨ã¨Ó°£¿ù¡C
- * 
  * This is a buggy program, use the debug concept to debug this program
  */
 public class Sin {
@@ -16,16 +14,15 @@ public class Sin {
 	}
 
 	/*
-	 * @param x: ®|«×
-	 * 
-	 * ³o­Óµ{¦¡³z¹L®õ°Ç®i¶}¥@¬öºâ x ªº sine ­È¡C¥Ñ©ó®õ°Ç®i¶}¦¡¥i¥H¤@ª½®i¨ìµL½a­È¡A§Ú­Ì¦bµ{¦¡¤¤¥²¶·³]©w°±¤îªº±ø¥ó¡C¤@¶}©l§Ú­ÌÅı¥L¶] n
-	 * ¦¸¡AµM«á¨C¦¸¥[ inc ­Ó³æ¦ì¡A·í¬Û¾Fªº¨â¦¸®t¶Z¤p©ó stop ®É´N°±¤î¡A§_«h´NÄ~Äòºâ¤U¥h¡C
+	 * @param x: å¾‘åº¦ é€™å€‹ç¨‹å¼é€éæ³°å‹’å±•é–‹ä¸–ç´€ç®— x çš„ sine
+	 * å€¼ã€‚ç”±æ–¼æ³°å‹’å±•é–‹å¼å¯ä»¥ä¸€ç›´å±•åˆ°ç„¡çª®å€¼ï¼Œæˆ‘å€‘åœ¨ç¨‹å¼ä¸­å¿…é ˆè¨­å®šåœæ­¢çš„æ¢ä»¶ã€‚ä¸€é–‹å§‹æˆ‘å€‘è®“ä»–è·‘ n æ¬¡ï¼Œç„¶å¾Œæ¯æ¬¡åŠ  inc å€‹å–®ä½ï¼Œç•¶ç›¸é„°çš„å…©æ¬¡å·®è·å°æ–¼
+	 * stop æ™‚å°±åœæ­¢ï¼Œå¦å‰‡å°±ç¹¼çºŒç®—ä¸‹å»ã€‚
 	 */
 	public double sin(double x) {
 
-		int n = 2; // ¤@¶}©l¶]ªº­Ó¼Æ; starting loop number
-		int inc = 3; // ¨C¤@¦¸¦h¥[ inc ­Ó­Ó¼Æ; we add inc loop each time
-		double stop = 0.000000000001; // °±¤îªº±ø¥ó; the stopping criteria
+		int n = 2; // ä¸€é–‹å§‹è·‘çš„å€‹æ•¸; starting loop number
+		int inc = 3; // æ¯ä¸€æ¬¡å¤šåŠ  inc å€‹å€‹æ•¸; we add inc loop each time
+		double stop = 0.000000000001; // åœæ­¢çš„æ¢ä»¶; the stopping criteria
 
 		double s1 = sin(x, n);
 		n = n + inc;
@@ -36,23 +33,22 @@ public class Sin {
 			n = n + inc;
 			s2 = sin(x, n);
 		}
-
 		return s2;
 	}
 
 	/*
 	 * @param n: number of items, for example, x-x^3/3!+x^5/5!, then n=3
 	 * 
-	 * ³o­Ó°Æµ{¦¡¸Ì­±¦³¤£¤ÖªºÅÜ¼Æ¡A¥i¥H¨Ï¥Î breakpoint Åıµ{¦¡°±¦b³o­Ó°Æµ{¦¡¡A¦A¨Ï¥Î variable view
-	 * ¨Ó¬İ°õ¦æ¹Lµ{¤¤³o¨ÇÅÜ¼ÆªºÅÜ¤Æ¡C
+	 * é€™å€‹å‰¯ç¨‹å¼è£¡é¢æœ‰ä¸å°‘çš„è®Šæ•¸ï¼Œå¯ä»¥ä½¿ç”¨ breakpoint è®“ç¨‹å¼åœåœ¨é€™å€‹å‰¯ç¨‹å¼ï¼Œå†ä½¿ç”¨ variable view
+	 * ä¾†çœ‹åŸ·è¡Œéç¨‹ä¸­é€™äº›è®Šæ•¸çš„è®ŠåŒ–ã€‚
 	 */
 	double sin(double x, int n) {
 		double v = x;
 		int postive = 1;
 		for (int i = 1; i < 2 * n; i = i + 2) {
 
-			// (Math.pow(x, i) / factorial(i)) ³o­Ó­È¦³ÂI½ÆÂø¡A§A¥i¥H¥Î expression view
-			// ¨Ó¬İ¤@¤U³o­Ó­È¬O¤£¬O§A´Á±æªº
+			// (Math.pow(x, i) / factorial(i)) é€™å€‹å€¼æœ‰é»è¤‡é›œï¼Œä½ å¯ä»¥ç”¨ expression view
+			// ä¾†çœ‹ä¸€ä¸‹é€™å€‹å€¼æ˜¯ä¸æ˜¯ä½ æœŸæœ›çš„
 			v = v + postive * (Math.pow(x, i) / factorial(i));
 			postive = postive * -1;
 		}
@@ -61,7 +57,7 @@ public class Sin {
 	}
 
 	/*
-	 * ¼Æ¾Çªº¶¥­¼; factorial(3) = 3*2*1
+	 * æ•¸å­¸çš„éšä¹˜; factorial(3) = 3*2*1
 	 */
 	double factorial(double s) {
 		double r = 1;
