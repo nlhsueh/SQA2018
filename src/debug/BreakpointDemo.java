@@ -13,8 +13,11 @@ public class BreakpointDemo {
 		int a = (int) (Math.random() * len); // remove +1
 		int b = (int) (Math.random() * len); // remove +1
 
+		// set breakpoint here to see a, b
 		int[] data2 = exchange(data, a, b);
 
+		// trace the code by "step by step run", use "variable to see the
+		// difference between data and data2
 		printArray(data2);// 看看 交換後的狀況
 		printArray(data); // data 不該有異動
 
