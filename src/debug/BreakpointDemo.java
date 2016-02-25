@@ -10,14 +10,20 @@ public class BreakpointDemo {
 		// 產生一個新的 data2 陣列，但部分內容對調
 		int a = (int) (Math.random() * len + 1);
 		int b = (int) (Math.random() * len + 1);
+		assert (a < len);
+		assert (b < len);
 
 		int[] data2 = exchange(data, a, b);
+		assert (data != data2);
 
-		printArray(data2);//看看 交換後的狀況 
-		printArray(data); //data 不該有異動
+		printArray(data2);// 看看 交換後的狀況
+		printArray(data); // data 不該有異動
 
 		sort(data);
-		printArray(data);//看看排序是否正確
+		for (int i = 0; i < data.length - 1; i++) {
+			assert (data[i] < data[i + 1]);
+		}
+		printArray(data);// 看看排序是否正確
 	}
 
 	public static int[] exchange(int[] data, int i, int j) {
