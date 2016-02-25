@@ -18,18 +18,10 @@ public class AssertionDemo {
 		input = scanner.nextInt();
 		while (input != -99) {
 			// no assert
-			System.out.println(input % 3);
 			demo.check1(input);
 
 			// using assert
-			demo.check2(input);
-
-			// if the method is not public, you may know the constraint of the
-			// argument so the "incident" will not occur. But you can still use
-			// assert to make your method readable and reliable
-			if (input > 0) {
-				demo.check1(input);
-			}
+			// demo.check2(input);
 
 			System.out.println("Please input an integer");
 			input = scanner.nextInt();
@@ -60,6 +52,7 @@ public class AssertionDemo {
 		} else if (value % 3 == 1) {
 			System.out.println("3n+1");
 		} else { // value %3 ==2
+
 			assert (value % 3 == 2);
 			System.out.println("3n+2");
 		}
@@ -85,12 +78,11 @@ public class AssertionDemo {
 }
 
 /*
- * ³o­Óµ{¦¡¥u¬O¬°¤F demo ©I¥s check ®É¡A­Y±a¤J¤@­Ó¿ù»~ªº­È¡A³Q©I¥sºİÀ³¸Ó­n³B²z¡]©ß¥X¨Ò¥~¡^¡A¦Ó«D¥u¬O assert
+ * é€™å€‹ç¨‹å¼åªæ˜¯ç‚ºäº† demo å‘¼å« check æ™‚ï¼Œè‹¥å¸¶å…¥ä¸€å€‹éŒ¯èª¤çš„å€¼ï¼Œè¢«å‘¼å«ç«¯æ‡‰è©²è¦è™•ç†ï¼ˆæ‹‹å‡ºä¾‹å¤–ï¼‰ï¼Œ 
+ * è€Œéåªæ˜¯ assert
  */
 class Caller {
-
 	void m1() {
-
 		AssertionDemo demo = new AssertionDemo();
 
 		// note check is a public method (service), "argument checking" is an
