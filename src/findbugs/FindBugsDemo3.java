@@ -1,3 +1,6 @@
+/**
+ * Author: Sammy Chen, FCU
+ */
 package findbugs;
 
 import java.io.FileReader;
