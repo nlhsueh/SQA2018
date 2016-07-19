@@ -2,12 +2,6 @@ package junitdemo;
 
 import java.util.Random;
 
-/**
- * 這個程式有錯誤。
- * 
- * 再開始修改這個程式以前，先建立他的 JUnit 模組，並測試它。修復它之後再用 JUnit 重新測試
- *
- */
 public class BubbleSort {	
 		
 	public void bubbleSort(int[] data) {

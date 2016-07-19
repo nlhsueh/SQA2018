@@ -1,19 +1,15 @@
 package junitdemo;
 
-/*
- * This program is used to demo the usage of JUnit,
- * check http://junit.sourceforge.net/javadoc/ to get more usage of JUnit 4
- */
-
-//NOTE the Assert is imported as "static"
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
-public class SimpleAddTest {
+public class SimpleAddTest2 {
+
+	
+	
 	SimpleAdd a;
 
 	/*
@@ -94,6 +90,5 @@ public class SimpleAddTest {
 				a.add4(new int[] { 1, 1 }, new int[] { 1, 1, 1 }));
 
 	}	
-
 
 }

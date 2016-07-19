@@ -25,12 +25,12 @@ public class TriangleTest {
 		assertEquals(regular, t.checkTriangle());
 		
 		//not a triangle
-//		t=new Triangle (2,2,6);
-//		assertEquals(notTriangle, t.checkTriangle());
-//		t=new Triangle (6,2,2);
-//		assertEquals(notTriangle, t.checkTriangle());		
-//		t=new Triangle (2,6,2);
-//		assertEquals(notTriangle, t.checkTriangle());
+		t=new Triangle (2,2,6);
+		assertEquals(notTriangle, t.checkTriangle());
+		t=new Triangle (6,2,2);
+		assertEquals(notTriangle, t.checkTriangle());		
+		t=new Triangle (2,6,2);
+		assertEquals(notTriangle, t.checkTriangle());
 
 		
 		//right angled
