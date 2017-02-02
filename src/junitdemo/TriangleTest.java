@@ -34,18 +34,18 @@ public class TriangleTest {
 
 		
 		//right angled
-//		t=new Triangle(3,4,5);
-//		assertEquals(rightAngle, t.checkTriangle());		
-//		t=new Triangle(5,4,3);
-//		assertEquals(rightAngle, t.checkTriangle());
-//		t=new Triangle(4,5,3);
-//		assertEquals(rightAngle, t.checkTriangle());
+		t=new Triangle(3,4,5);
+		assertEquals(rightAngle, t.checkTriangle());		
+		t=new Triangle(5,4,3);
+		assertEquals(rightAngle, t.checkTriangle());
+		t=new Triangle(4,5,3);
+		assertEquals(rightAngle, t.checkTriangle());
 		
 		//just a triangle
-//		t=new Triangle(2,2,3);
-//		assertEquals(triangle, t.checkTriangle());
-//		t=new Triangle(8,9,7);
-//		assertEquals(triangle, t.checkTriangle());	
+		t=new Triangle(2,2,3);
+		assertEquals(triangle, t.checkTriangle());
+		t=new Triangle(8,9,7);
+		assertEquals(triangle, t.checkTriangle());	
 		
 	}
 

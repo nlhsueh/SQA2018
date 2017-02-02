@@ -19,7 +19,7 @@ public class SimpleAddTest {
 	/*
 	 * the method will run once when a @Test method run
 	 */
-	@Before
+	@Before 
 	public void setUp() {
 		a = new SimpleAdd();
 		// note how many times the method runs
@@ -70,20 +70,19 @@ public class SimpleAddTest {
 	/*
 	 * Using assertArrayEquals
 	 */
-//	@Test
-//	@Ignore	
-//	public void testArrayAdd() {
-//		try {
-//			assertArrayEquals(new int[] { 2, 2, 2 },
-//					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 1, 2 }));
-//			assertArrayEquals(new int[] { 2, 2, 2 },
-//					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 1, 1 }));
-//			assertArrayEquals(new int[] { 2, 4, 2 },
-//					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 3, 1 }));
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	@Test
+	public void testArrayAdd() {
+		try {
+			assertArrayEquals(new int[] { 2, 2, 3 },
+					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 1, 2 }));
+			assertArrayEquals(new int[] { 2, 2, 2 },
+					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 1, 1 }));
+			assertArrayEquals(new int[] { 2, 4, 2 },
+					a.add4(new int[] { 1, 1, 1 }, new int[] { 1, 3, 1 }));
+		} catch (Exception e) { 
+			e.printStackTrace();  
+		}
+	}
 
 	/*
 	 * test exception

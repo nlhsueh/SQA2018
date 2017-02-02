@@ -6,10 +6,7 @@ package junitdemo;
 
 public class SimpleAdd {
 
-	public static void main(String[] args) {
-		SimpleAdd add = new SimpleAdd();
-		System.out.println(add.add(11,12));
-	}
+
 
 	public int add(int a, int b) {
 		return a + b;
