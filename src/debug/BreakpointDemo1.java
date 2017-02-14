@@ -1,9 +1,7 @@
 package debug;
 
 public class BreakpointDemo1 {
-
 	public static void main(String[] args) {
-
 		int total = 7;
 		int people = 2;
 		double avg = total / people;
@@ -14,10 +12,7 @@ public class BreakpointDemo1 {
 			money += 100;
 		else
 			money -= 100;
-		
-		//what is the value of money?
+		// what is the value of money?
 		System.out.println(money);
-
 	}
-
 }
