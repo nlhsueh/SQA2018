@@ -1,22 +1,29 @@
 package debug;
 
+/*
+ * 這是一個有錯的程式，請利用 breakpoint 來除錯
+ */
 public class BreakpointDemo {
 
 	public static void main(String[] args) {
 		int[] data = { 1, 2, 3, 10, 9, 6, 7 };
-		int len = data.length;
+		System.out.print("data:\t");
 		printArray(data);
 
 		// 產生一個新的 data2 陣列，但部分內容對調
+		int len = data.length;
 		int a = (int) (Math.random() * len + 1);
 		int b = (int) (Math.random() * len + 1);
-
+		// 預期 data 內的資料不會受影響
 		int[] data2 = exchange(data, a, b);
 
-		printArray(data2);//看看 交換後的狀況 
+		System.out.print("data2:\t");
+		printArray(data2);//看看 交換後的狀況
+		System.out.print("data:\t");
 		printArray(data); //data 不該有異動
 
-		sort(data);
+		sort(data); //這時候 data 會有異動
+		System.out.print("data:\t");
 		printArray(data);//看看排序是否正確
 	}
 
