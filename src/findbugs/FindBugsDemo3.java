@@ -16,6 +16,14 @@ public class FindBugsDemo3 {
 	 * [28/Aug/1995:00:00:34 -0400]
 	 * "GET /pub/rmharris/catalogs/dawsocat/intro.html HTTP/1.0" 200 3542
 	 * 則時間資訊為28/Aug/1995:00:00:34
+     
+     204.249.225.59 - -[28/Aug/1995:00:00:34 -0400] "GET /pub/rmharris/catalogs/dawsocat/intro.html HTTP/1.0" 200 3542
+     204.249.225.59 - - [29/Aug/1995:00:00:34 -0400] "GET /pub/rmharris/catalogs/dawsocat/intro.html HTTP/1.0" 200 3542
+     204.249.230.60 - - [29/Aug/1995:00:00:50 -0400] "GET /pub/rmharris/catalogs/dawsocat/intro.html HTTP/1.0" 200 3542
+     204.249.212.61 - - [29/Aug/1995:00:00:50 -0400] "GET /pub/rmharris/catalogs/dawsocat/intro.html HTTP/1.0" 200 3542
+     204.249.224.61 - -[29/Aug/1995:00:00:50 -0400] "GET /pub/rmharris/catalogs/dawsocat/intro.html HTTP/1.0" 200 3542
+
+     
 	 */
 	void parseLog() {
 
