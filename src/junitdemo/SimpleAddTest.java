@@ -1,17 +1,16 @@
 package junitdemo;
 
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
 /*
  * This program is used to demo the usage of JUnit,
  * check http://junit.sourceforge.net/javadoc/ to get more usage of JUnit 4
  */
 
-//NOTE the Assert is imported as "static"
-import static org.junit.Assert.*;
-
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
 
 public class SimpleAddTest {
 	SimpleAdd a;
