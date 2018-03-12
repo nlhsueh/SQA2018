@@ -1,4 +1,4 @@
-package integrationdemo;
+package integration;
 
 interface GradeDB {
 	int[][] getGrade(int classID);

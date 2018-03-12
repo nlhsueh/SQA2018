@@ -1,4 +1,4 @@
-package integrationdemo;
+package integration;
 
 /*
  * This is a stub class

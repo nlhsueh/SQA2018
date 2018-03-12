@@ -1,4 +1,4 @@
-package integrationdemo;
+package integration;
 
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package integrationdemo;
+package integration;
 
 /*
  * This demo program is for "Integration Test"
