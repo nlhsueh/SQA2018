@@ -12,27 +12,25 @@ public class AssertionDemo {
 	public static void main(String[] args) {
 		AssertionDemo demo = new AssertionDemo();
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please input an integer");
 		int input;
 
-		input = scanner.nextInt();
-		while (input != -99) {
-			// no assert
-			demo.check1(input);
-
-			// using assert
-			// demo.check2(input);
-
+		do {
 			System.out.println("Please input an integer");
 			input = scanner.nextInt();
-		}
+			
+			demo.noAssertCheck(input); // no assert
 
-		Caller c = new Caller();
+			// using assert
+			demo.checkWithAssert(input);
+		} while (input != -99);
+		scanner.close();
+
+		CheckCaller c = new CheckCaller();
 		c.m1();
 	}
 
 	// assert is not use
-	private void check1(int value) {
+	private void noAssertCheck(int value) {
 		if (value % 3 == 0) {
 			System.out.println("3n");
 		} else if (value % 3 == 1) {
@@ -46,13 +44,12 @@ public class AssertionDemo {
 	/*
 	 * Using assert
 	 */
-	private void check2(int value) {
+	private void checkWithAssert(int value) {
 		if (value % 3 == 0) {
 			System.out.println("3n");
 		} else if (value % 3 == 1) {
 			System.out.println("3n+1");
 		} else { // value %3 ==2
-
 			assert (value % 3 == 2);
 			System.out.println("3n+2");
 		}
@@ -62,7 +59,7 @@ public class AssertionDemo {
 	 * if the method is public (service), do not use assertion to do your
 	 * argument check. Use Exception
 	 */
-	public void check(int value) throws Exception {
+	public void preconditionCheck(int value) throws Exception {
 		if (value < 0)
 			throw new Exception("the value must be larger 0");
 
@@ -78,17 +75,16 @@ public class AssertionDemo {
 }
 
 /*
- * 這個程式只是為了 demo 呼叫 check 時，若帶入一個錯誤的值，被呼叫端應該要處理（拋出例外）， 
- * 而非只是 assert
+ * 這個程式只是為了 demo 呼叫 check 時，若帶入一個錯誤的值，被呼叫端應該要處理（拋出例外）， 而非只是 assert
  */
-class Caller {
+class CheckCaller {
 	void m1() {
 		AssertionDemo demo = new AssertionDemo();
 
 		// note check is a public method (service), "argument checking" is an
 		// important task
 		try {
-			demo.check(-100);
+			demo.preconditionCheck(-100);
 		} catch (Exception e) {
 			System.out.println(e);
 			System.exit(1);
